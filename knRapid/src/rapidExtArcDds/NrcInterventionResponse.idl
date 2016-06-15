@@ -20,7 +20,7 @@ module rapid {
         RESPONSE_TYPE_COMPLETED, // teleoperator has finished working on this request
         RESPONSE_TYPE_ATTENDING, // teleoperator is working on a solution
         RESPONSE_TYPE_SOLUTION,  // teleoperator has sent an actionable solution 
-        RESPONSE_TYPE_STATEMENT, // commuication intended for vehicle occupant
+        RESPONSE_TYPE_STATEMENT, // communication intended for vehicle occupant
         RESPONSE_TYPE_NOTE       // teleoperator note about this teleop zone and/or solution
       };
       
