@@ -166,8 +166,13 @@ namespace rapid
 
       // check if this is for us
       if (strcmp(Miro::RobotParameters::instance()->name.c_str(), cmd->hdr.assetName) != 0) {
-        boost::throw_exception(ECommand(string("Rapid CmdMgr - received command that was for somebody else: ") +
-                                        cmd->hdr.assetName));
+        if (m_params->groupCommands && strcmp("*", cmd->hdr.assetName) == 0) {
+          // don't reject command
+        }
+        else {
+          boost::throw_exception(ECommand(string("Rapid CmdMgr - received command that was for somebody else: ") +
+                                          cmd->hdr.assetName));
+        }
       }
 
       if (m_queue->hasCmdId(cmd->cmdId)) {
