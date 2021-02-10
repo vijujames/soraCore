@@ -150,16 +150,19 @@ namespace rapid
     return ostr;
   }
 
+  /** BROKEN Says "redefinition...
   ostream& operator<< (ostream& ostr, String32Sequence32 const& rhs)
   {
     printSequence(ostr, rhs);
     return ostr;
-  }
+  } */
+
+  /** BROKEN Says "redefinition...
   ostream& operator<< (ostream& ostr, String128Sequence64 const& rhs)
   {
     printSequence(ostr, rhs);
     return ostr;
-  }
+  } */
 
 
 
@@ -413,6 +416,8 @@ namespace rapid
       dst[i][15] = 0;
     }
   }
+
+  /** BROKEN -- says redefinition
   void operator<<= (rapid::String128Sequence64& dst, std::vector<std::string> const& src)
   {
     dst.ensure_length(src.size(), 64);
@@ -421,5 +426,5 @@ namespace rapid
       strncpy(dst[i], src[i].c_str(), 127);
       dst[i][127] = 0;
     }
-  }
+  } */
 } // namespace rapid

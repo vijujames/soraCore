@@ -687,25 +687,44 @@ namespace rapid
 
   namespace
   {
+    /** BROKEN original
     static rapid::KeyTypePair cancelCommandArguments[] = {
       { rapid::QUEUE_METHOD_CANCELCOMMAND_PARAM_CMDID, rapid::QUEUE_METHOD_DTYPE_CMDID }
+    }; */
+    static rapid::KeyTypePair cancelCommandArguments[] = {
+      { (char *) rapid::QUEUE_METHOD_CANCELCOMMAND_PARAM_CMDID, rapid::QUEUE_METHOD_DTYPE_CMDID }
     };
     static int const NUM_CANCELCOMMAND_ARGUMENTS = sizeof(cancelCommandArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN original
     static rapid::KeyTypePair deleteMacroArguments[] = {
       { rapid::QUEUE_METHOD_DELETEMACRO_PARAM_NAME, rapid::QUEUE_METHOD_DELETEMACRO_DTYPE_NAME }
+    }; */
+    static rapid::KeyTypePair deleteMacroArguments[] = {
+      { (char *) rapid::QUEUE_METHOD_DELETEMACRO_PARAM_NAME, rapid::QUEUE_METHOD_DELETEMACRO_DTYPE_NAME }
     };
     static int const NUM_DELETEMACRO_ARGUMENTS = sizeof(deleteMacroArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN original
     static rapid::KeyTypePair loadMacroArguments[] = {
       { rapid::QUEUE_METHOD_LOADMACRO_PARAM_NAME, rapid::QUEUE_METHOD_LOADMACRO_DTYPE_NAME },
       { rapid::QUEUE_METHOD_LOADMACRO_PARAM_VERSION, rapid::QUEUE_METHOD_LOADMACRO_DTYPE_VERSION }
+    }; */
+
+    static rapid::KeyTypePair loadMacroArguments[] = {
+      { (char *) rapid::QUEUE_METHOD_LOADMACRO_PARAM_NAME, rapid::QUEUE_METHOD_LOADMACRO_DTYPE_NAME },
+      { (char *) rapid::QUEUE_METHOD_LOADMACRO_PARAM_VERSION, rapid::QUEUE_METHOD_LOADMACRO_DTYPE_VERSION }
     };
     static int const NUM_LOADMACRO_ARGUMENTS = sizeof(loadMacroArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN original
     static rapid::KeyTypePair requeueArguments[] = {
       { rapid::QUEUE_METHOD_REQUEUE_PARAM_CMDID, rapid::QUEUE_METHOD_DTYPE_CMDID },
       { rapid::QUEUE_METHOD_REQUEUE_PARAM_TARGETCMDID, rapid::QUEUE_METHOD_DTYPE_CMDID }
+    }; */
+    static rapid::KeyTypePair requeueArguments[] = {
+      { (char *) rapid::QUEUE_METHOD_REQUEUE_PARAM_CMDID, rapid::QUEUE_METHOD_DTYPE_CMDID },
+      { (char *) rapid::QUEUE_METHOD_REQUEUE_PARAM_TARGETCMDID, rapid::QUEUE_METHOD_DTYPE_CMDID }
     };
     static int const NUM_REQUEUE_ARGUMENTS = sizeof(requeueArguments) / sizeof(rapid::KeyTypePair);
 

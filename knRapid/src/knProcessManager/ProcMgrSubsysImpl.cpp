@@ -53,14 +53,23 @@ namespace kn
 
   namespace
   {
+    /** BROKEN
     static rapid::KeyTypePair arguments[] = {
       { rapid::ext::PROCMGR_METHOD_PARAM_PROCESSID, rapid::ext::PROCMGR_METHOD_DTYPE_PROCESSID }
+    }; */
+    static rapid::KeyTypePair arguments[] = {
+      { (char *) rapid::ext::PROCMGR_METHOD_PARAM_PROCESSID, rapid::ext::PROCMGR_METHOD_DTYPE_PROCESSID }
     };
     static int const NUM_ARGUMENTS = sizeof(arguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair setCmdLineArguments[] = {
       { rapid::ext::PROCMGR_METHOD_PARAM_PROCESSID, rapid::ext::PROCMGR_METHOD_DTYPE_PROCESSID },
       { rapid::ext::PROCMGR_METHOD_PARAM_CMDLINE, rapid::ext::PROCMGR_METHOD_DTYPE_CMDLINE }
+    }; */
+    static rapid::KeyTypePair setCmdLineArguments[] = {
+      { (char *) rapid::ext::PROCMGR_METHOD_PARAM_PROCESSID, rapid::ext::PROCMGR_METHOD_DTYPE_PROCESSID },
+      { (char *) rapid::ext::PROCMGR_METHOD_PARAM_CMDLINE, rapid::ext::PROCMGR_METHOD_DTYPE_CMDLINE }
     };
     static int const NUM_SETCMDLINE_ARGUMENTS = sizeof(setCmdLineArguments) / sizeof(rapid::KeyTypePair);
 

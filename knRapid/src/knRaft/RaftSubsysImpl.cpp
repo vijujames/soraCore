@@ -54,39 +54,69 @@ namespace kn
 
   namespace
   {
+    /** BROKEN
     static rapid::KeyTypePair pauseArguments[] = {
       { rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID }
+    }; */
+    static rapid::KeyTypePair pauseArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID }
     };
     static int const PAUSE_ARGUMENTS = sizeof(pauseArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair putFileArguments[] = {
       { rapid::RAFT_METHOD_PARAM_UUID, rapid::RAFT_METHOD_DTYPE_UUID },
       { rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID },
       { rapid::RAFT_METHOD_PARAM_PRIORITY, rapid::RAFT_METHOD_DTYPE_PRIORITY }
+    }; */
+    static rapid::KeyTypePair putFileArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_UUID, rapid::RAFT_METHOD_DTYPE_UUID },
+      { (char *) rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID },
+      { (char *) rapid::RAFT_METHOD_PARAM_PRIORITY, rapid::RAFT_METHOD_DTYPE_PRIORITY }
     };
     static int const PUTFILE_ARGUMENTS = sizeof(putFileArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair putMatchingArguments[] = {
       { rapid::RAFT_METHOD_PARAM_KEY, rapid::RAFT_METHOD_DTYPE_KEY },
       { rapid::RAFT_METHOD_PARAM_VALUE, rapid::RAFT_METHOD_DTYPE_VALUE },
       { rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID },
       { rapid::RAFT_METHOD_PARAM_PRIORITY, rapid::RAFT_METHOD_DTYPE_PRIORITY }
+    }; */
+    static rapid::KeyTypePair putMatchingArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_KEY, rapid::RAFT_METHOD_DTYPE_KEY },
+      { (char *) rapid::RAFT_METHOD_PARAM_VALUE, rapid::RAFT_METHOD_DTYPE_VALUE },
+      { (char *) rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID },
+      { (char *) rapid::RAFT_METHOD_PARAM_PRIORITY, rapid::RAFT_METHOD_DTYPE_PRIORITY }
     };
     static int const PUTMATCHING_ARGUMENTS = sizeof(putMatchingArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair removeFileArguments[] = {
       { rapid::RAFT_METHOD_PARAM_UUID, rapid::RAFT_METHOD_DTYPE_UUID }
+    }; */
+    static rapid::KeyTypePair removeFileArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_UUID, rapid::RAFT_METHOD_DTYPE_UUID }
     };
     static int const REMOVEFILE_ARGUMENTS = sizeof(removeFileArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair resumeArguments[] = {
       { rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID }
+    }; */
+    static rapid::KeyTypePair resumeArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_CHANNELID, rapid::RAFT_METHOD_DTYPE_CHANNELID }
     };
     static int const RESUME_ARGUMENTS = sizeof(resumeArguments) / sizeof(rapid::KeyTypePair);
 
+    /** BROKEN
     static rapid::KeyTypePair setBandwidthArguments[] = {
       { rapid::RAFT_METHOD_PARAM_BANDWIDTHBPS, rapid::RAFT_METHOD_DTYPE_BANDWIDTHBPS },
       { rapid::RAFT_METHOD_PARAM_PREFETCHKBANDWIDTHBPS, rapid::RAFT_METHOD_DTYPE_PREFETCHKBANDWIDTHBPS }
+    }; */
+    static rapid::KeyTypePair setBandwidthArguments[] = {
+      { (char *) rapid::RAFT_METHOD_PARAM_BANDWIDTHBPS, rapid::RAFT_METHOD_DTYPE_BANDWIDTHBPS },
+      { (char *) rapid::RAFT_METHOD_PARAM_PREFETCHKBANDWIDTHBPS, rapid::RAFT_METHOD_DTYPE_PREFETCHKBANDWIDTHBPS }
     };
     static int const SETBANDWIDTH_ARGUMENTS = sizeof(setBandwidthArguments) / sizeof(rapid::KeyTypePair);
 

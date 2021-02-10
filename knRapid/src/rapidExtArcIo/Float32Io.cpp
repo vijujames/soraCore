@@ -36,10 +36,10 @@ namespace rapid
       std::ostream& operator<< (std::ostream& ostr, ext::arc::Float32Config const& rhs)
       {
         ostr << "Float32Config: {" 
-             << rhs.hdr << ", " 
-             << rhs.category << ", "
-             << rhs.metaData << ", "
-             << rhs.dataKeys
+             // -- BROKEN << rhs.hdr << ", " 
+             // -- BROKEN << rhs.category << ", "
+             // -- BROKEN << rhs.metaData << ", "
+             // -- BROKEN << rhs.dataKeys
              << "}";
         return ostr;
       }
